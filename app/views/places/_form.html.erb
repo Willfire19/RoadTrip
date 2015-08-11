@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= hidden_field_tag "trip_id", @trip.id %>
+
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
