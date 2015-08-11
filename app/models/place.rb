@@ -4,4 +4,5 @@ class Place < ActiveRecord::Base
 	after_validation :geocode, :if => :address_changed?
 
 	validates :trip_id, presence: true
+	validates :address, presence: true
 end
