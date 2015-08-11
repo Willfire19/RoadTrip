@@ -8,10 +8,13 @@
 <p>Add a new Place!</p>
 <%= render "places/form" %>
 
-<% @places.each do |place| %>
-	<%= place.address %>
-	<br>
-<% end %>
+<div class="trip_places">
+	<ul id="place_list">
+		<% @places.each do |place| %>
+			<li><%= place.address %></li>
+		<% end %>
+	</ul>
+</div>
 
 <script>
 	$( document ).ready(function() {

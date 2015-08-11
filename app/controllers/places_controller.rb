@@ -32,6 +32,7 @@ class PlacesController < ApplicationController
       if @place.save
         format.html { redirect_to @trip, notice: 'Place was successfully created.' }
         format.json { render :show, status: :created, location: @place }
+        format.js { }
       else
         format.html { render :new }
         format.json { render json: @place.errors, status: :unprocessable_entity }
