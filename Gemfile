@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Geocoder Gem to store and retreive places with lat and long coordinates
 gem 'geocoder'
 
+# Google Maps for Rails
+gem 'underscore-rails' #gmaps4rails is dependent on this
+gem 'gmaps4rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

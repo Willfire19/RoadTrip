@@ -12,6 +12,10 @@ class TripsController < ApplicationController
   def show
     @place = Place.new
     @places = @trip.places
+    @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+    end
   end
 
   # GET /trips/new
