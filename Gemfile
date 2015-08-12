@@ -30,6 +30,10 @@ gem 'geocoder'
 gem 'underscore-rails' #gmaps4rails is dependent on this
 gem 'gmaps4rails'
 
+# Bootstrap to put in simple design
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
