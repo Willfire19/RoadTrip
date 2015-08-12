@@ -26,7 +26,6 @@ class PlacesController < ApplicationController
   def create
     @trip = Trip.find_by_id(params[:trip_id])
     @place = @trip.places.build(place_params)
-    # @place = Place.new(place_params)
 
     respond_to do |format|
       if @place.save

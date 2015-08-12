@@ -8,11 +8,6 @@
 		  			<%= link_to trip.title, trip %>
 		  		</div>
 
-		  		<!-- Commenting this out because I don't want to confuse users. Editting a trip just allows users to edit the title of the trip. Going to the trip allows users to add more destinations -->
-		  		<!-- <div class="col-xs-3">
-		        <%= link_to 'Edit', edit_trip_path(trip), :class => "btn btn-primary" %>
-		      </div> -->
-
 		      <div class="col-xs-4">
 		        <%= link_to 'Destroy', trip, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
 		      </div>

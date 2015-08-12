@@ -1,28 +1,29 @@
-== README
+== OverView
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a RoadTrip app to document the places a user may want to visit. A user can create a RoadTrip, then add places to that road trip. Once the user refreshes the page, the user can view a google map with markers placed on the destinations the user wants to go to.
 
-Things you may want to cover:
+== Details
 
-* Ruby version
+* A User can create a RoadTrip and Delete a RoadTrip
 
-* System dependencies
+* A User can create a Place, and that Place is associated with a RoadTrip through a has_many relationship
 
-* Configuration
+* There are plenty of partials used to refactor the html code throughout the project
 
-* Database creation
+* I used the Geocoder gem to geocode the locations of places, and I used Gmaps4rails to display the locations on a Google Map
 
-* Database initialization
+* Adding a Place to a RoadTrip is done through an Ajax request
 
-* How to run the test suite
+== Problems
 
-* Services (job queues, cache servers, search engines, etc.)
+* While I could add Places to RoadTrips on the fly, I could not figure out how to display the new locations on the Google Maps dynamically. Right now, you have to refresh the page once you have added all of the places you want to go to in order to see the changes on the map. I want to spend more time to fix this problem, but I couldn't solve it within the three hours.
 
-* Deployment instructions
+* I also wanted to map directions between places, but I need to solve the above problem first.
 
-* ...
+* Right now, the ruby app doesn't account for uniqueness in the Places address. This means that if a lot of users want to go to New York, there are going to be a lot of entries in the Places table in the database with the entry as 'New York'. This is redundant and not scalable, but it works for this app right now.
 
+* A possible solution to the above problem may be to set up an intermediate table to hold relationships between RoadTrips and Places, so that RoadTrips has_many places and Places has_many RoadTrips. Then, we have a counter value for each places entry to keep track of how many roadtrips are going to that particular place.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Given more time, I could make a better front-end design.
+
+== Thanks for the opportunity!
