@@ -1,0 +1,23 @@
+<%= form_for(@place, remote: true, :html => {:class => 'form-inline'} ) do |f| %>
+  <% if @place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% @place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= hidden_field_tag "trip_id", @trip.id %>
+
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  
+  <%= f.submit class: 'btn btn-primary' %>
+
+<% end %>
