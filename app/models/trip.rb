@@ -1,4 +1,4 @@
 class Trip < ActiveRecord::Base
 
-	has_many :places
+	has_many :places, dependent: :destroy
 end
